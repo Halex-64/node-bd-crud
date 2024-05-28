@@ -6,11 +6,11 @@ const app = express();
 app.use(bodyParser.json());
 
 const PORT = 3000;
-const connectionString = "server=DSN1191061623;Database=carros;Trusted_Connection=Yes;Driver={Sql Server Native Client 11.0}";
+const connectionString = "server=DSN1191137658;Database=carros;Trusted_Connection=Yes;Driver={Sql Server Native Client 11.0}";
 
 //Leitura
 app.get("/carros", (req,res) => {
-    sql.query(connectionString, "SELECT * FROM carro", (erro, rows) => {
+    sql.query(connectionString, "SELECT * FROM carros", (erro, rows) => {
         if(erro){
             res.status(500).json("Erro Interno de Servidor");
         } else {
